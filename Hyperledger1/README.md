@@ -17,10 +17,9 @@ level-3-rest-api/` - Go REST API that calls the chaincode via Fabric Gateway cli
 ## Level-2: Chaincode (how to deploy)
 1. we have to edit `level-2-chaincode/accountcc/main.go`  to change logic/attributes.
 2. Build/package (example):
-   
-   # from level-2-chaincode directory
-   # queryinstalled to get package ID
-   # approve, checkcommitreadiness, commit etc. See deploy_chaincode.sh.
+from level-2-chaincode directory
+queryinstalled to get package ID
+approve, checkcommitreadiness, commit etc. See deploy_chaincode.sh.
 
 ## Level-3: REST API
 1. In `level-3-rest-api/main.go` to point certificate, key, peer endpoint and gateway connection details for the network (paths to MSP certs/keys).
@@ -29,8 +28,7 @@ level-3-rest-api/` - Go REST API that calls the chaincode via Fabric Gateway cli
    go mod tidy
    go run main.go
 
-3. Or build Docker image and run (update envs & volumes):
-   
+3. Or build Docker image and run (update envs & volumes)
    docker build -t fabric-rest-api.
    The REST service will connect to the gateway and expose endpoints on port 8080.
 
