@@ -1,0 +1,78 @@
+{
+  "info": {
+    "name": "Fabric API",
+    "_postman_id": "b8a1d28f-7c55-4d06-93d7-0fcd67f8d000",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/health"
+      }
+    },
+    {
+      "name": "Create Account",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": \"ACC101\", \"dealerId\": \"DEALER101\", \"msisdn\": \"9990001111\", \"mpin\": \"1234\", \"balance\": 500, \"status\": \"ACTIVE\", \"transType\": \"OPEN\", \"remarks\": \"seed\"}"
+        },
+        "url": "http://localhost:8080/accounts"
+      }
+    },
+    {
+      "name": "Read Account",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/accounts/ACC101"
+      }
+    },
+    {
+      "name": "All Accounts",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/accounts"
+      }
+    },
+    {
+      "name": "Credit",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"amount\": \"100\", \"type\": \"CREDIT\", \"remarks\": \"topup\"}"
+        },
+        "url": "http://localhost:8080/accounts/ACC101/transaction"
+      }
+    },
+    {
+      "name": "History",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/accounts/ACC101/history"
+      }
+    },
+    {
+      "name": "Delete",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8080/accounts/ACC101"
+      }
+    }
+  ]
+}

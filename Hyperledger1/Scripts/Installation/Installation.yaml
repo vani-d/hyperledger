@@ -1,0 +1,20 @@
+# Level-1
+Installation 
+
+sudo apt-get install git curl docker-compose -y
+
+# Docker 
+sudo systemctl start docker
+
+# Add your user to the Docker group.
+sudo usermod -a -G docker <username>
+
+# Check version numbers  
+docker --version
+docker-compose --version
+
+sudo systemctl enable docker
+
+## Downloaded the Fabric samples, Docker images, and binaries.
+
+## Created a Channel - mychannel
