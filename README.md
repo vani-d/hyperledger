@@ -1,4 +1,4 @@
-Hyperledger Fabric 
+## Hyperledger Fabric Assignment
 
 What this assignment contains: a ready-to-inspect project implementing the requested assignment (Level-1 instructions, Level-2 chaincode in Go, Level-3 REST API in Go + Dockerfile).
 
@@ -17,10 +17,9 @@ level-3-rest-api/` - Go REST API that calls the chaincode via Fabric Gateway cli
 ## Level-2: Chaincode (how to deploy)
 1. we have to edit `level-2-chaincode/accountcc/main.go`  to change logic/attributes.
 2. Build/package (example):
-   
-   # from level-2-chaincode directory
-   # queryinstalled to get package ID
-   # approve, checkcommitreadiness, commit etc. See deploy_chaincode.sh.
+from level-2-chaincode directory
+queryinstalled to get package ID
+approve, checkcommitreadiness, commit etc. See deploy_chaincode.sh.
 
 ## Level-3: REST API
 1. In `level-3-rest-api/main.go` to point certificate, key, peer endpoint and gateway connection details for the network (paths to MSP certs/keys).
