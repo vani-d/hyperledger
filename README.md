@@ -1,4 +1,4 @@
-# Hyperledger1 
+Hyperledger Fabric 
 
 What this assignment contains: a ready-to-inspect project implementing the requested assignment (Level-1 instructions, Level-2 chaincode in Go, Level-3 REST API in Go + Dockerfile).
 
